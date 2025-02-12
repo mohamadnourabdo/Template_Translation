@@ -1,0 +1,94 @@
+/* Start Color */
+:root {
+  --main-color: #2196f3;
+  --main-color-background: #162552;
+  --main-color-text: #444;
+  --main-transition: 0.3s;
+}
+/* End Color */
+/* Start Global Rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Work Sans", serif;
+  background-color: var(--main-color-background);
+}
+a {
+  text-decoration: none;
+}
+/* End Global Rules */
+/* Start Container */
+.container {
+  margin-inline: auto;
+  padding-inline: 15px;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 750px;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 970px;
+  }
+  @media only screen and (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+/* End Container */
+
+/* Start Header */
+.header {
+  background-color: white;
+  box-shadow: 0px 0px 10px black;
+  .container {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a img {
+      width: 60px;
+    }
+    nav {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      > a {
+        color: var(--main-color);
+        font-size: 18px;
+        padding-inline: 10px;
+        font-weight: 600;
+        &:first-child {
+          border-right: 2px solid var(--main-color);
+        }
+        transition: var(--main-transition);
+        &:hover {
+          color: black;
+        }
+      }
+      .language {
+        border-radius: 5px;
+        display: flex;
+        background-color: var(--main-color-text);
+        padding: 5px 10px;
+        margin-left: 10px;
+        color: var(--main-color);
+        font-weight: 800;
+        justify-content: center;
+        div:first-child {
+          border-right: 1px solid var(--main-color);
+          padding-right: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      flex-direction: column;
+      padding-block: 10px;
+    }
+  }
+}
+/* End Header */
