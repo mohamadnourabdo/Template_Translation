@@ -41,6 +41,10 @@ a {
 
 /* Start Header */
 .header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
   background-color: white;
   box-shadow: 0px 0px 10px black;
   .container {
@@ -70,6 +74,7 @@ a {
         }
       }
       .language {
+        cursor: pointer;
         border-radius: 5px;
         display: flex;
         background-color: var(--main-color-text);
@@ -92,3 +97,59 @@ a {
   }
 }
 /* End Header */
+
+/* Start Main */
+.main {
+  min-height: calc(100vh - 72px);
+  width: 1000px;
+  max-width: 100%;
+  background-color: white;
+  margin: 72px auto 0;
+  h1 {
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--main-color);
+    color: white;
+  }
+  .card {
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    img {
+      width: 300px;
+      border-radius: 15px;
+    }
+    .text {
+      flex: 1;
+      padding: 10px;
+      h2 {
+        font-weight: 800;
+        letter-spacing: -1px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-weight: 300;
+        line-height: 1.6;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    margin-top: 100.16px;
+    h1 {
+      font-size: 20px;
+    }
+    .card {
+      flex-direction: column;
+      img {
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+      }
+      &:not(:last-child) {
+        border-bottom: 2px solid var(--main-color);
+      }
+    }
+  }
+}
+/* End Main */
